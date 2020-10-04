@@ -103,7 +103,7 @@ void enter_extension(void){
 void rename_files(void){
   int i = 0;
     char temp[500]={};
-    char temp1[5] = {};
+    char temp1[20] = {};    //low space causes overflow
 
     directory_pointer = opendir(default_path);
     while ((read_dir_ptr = readdir(directory_pointer)))
